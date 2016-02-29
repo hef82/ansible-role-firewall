@@ -14,7 +14,7 @@ firewall_v4_default_rules:
   200 allow ssh:
     - -A INPUT -p tcp --dport ssh -j ACCEPT
   999 drop everything:
-    - -P INPUT DROP
+    - -A INPUT -j DROP
 
 firewall_v4_group_rules: {}
 
